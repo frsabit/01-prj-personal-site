@@ -1,1 +1,251 @@
-/* Add you CSS here */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9dede; /* lighter maroon background */
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  padding-top: 60px; /* space for sticky navbar */
+}
+
+/* Define a new light maroon color for accents */
+:root {
+  --maroon: #800000;
+  --light-maroon: #c59999;
+  --lighter-maroon: #b47a7a;
+  --very-light-maroon: #ecbfc4;
+  --navbar-bg: #fff3e6;      /* light peach for navbar */
+  --navbar-link: #800000;    /* maroon for navbar links */
+  --navbar-link-hover: #fff; /* white on hover */
+  --navbar-link-bg-hover: #b47a7a; /* darker maroon on hover */
+  --hero-bg: #993333; /* a bit more maroon for hero */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: var(--hero-bg); /* more maroon */
+  color: white;
+  width: 100vw; /* fill to edges of the screen */
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero > * {
+  max-width: 700px; /* limit content width for readability */
+  width: 100%;
+}
+
+/* Make profile image visible and stand out */
+.profile-pic {
+  width: 160px; /* increased from 120px */
+  height: 160px; /* increased from 120px */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 15px;
+  background-color: #fff; /* fallback background */
+  box-shadow: 0 2px 8px rgba(128,0,0,0.15); /* subtle maroon shadow */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Navigation Bar */
+.navbar {
+  width: 100%;
+  background-color: var(--navbar-bg); /* new navbar background */
+  padding: 12px 0;
+  text-align: center;
+  position: sticky; /* stays at the top when scrolling */
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(128,0,0,0.07); /* subtle shadow */
+}
+
+/* Navigation links */
+.navbar a {
+  color: var(--navbar-link); /* maroon text */
+  text-decoration: none;
+  margin: 0 18px;
+  font-size: 1.1rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  /* Add a slight background for contrast */
+  background-color: transparent;
+}
+
+/* Navigation icon style for all navbar icons */
+.navbar .nav-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
+  margin-bottom: 3px;
+}
+
+/* Hover effect for navigation links */
+.navbar a:hover {
+  background-color: var(--navbar-link-bg-hover); /* darker maroon */
+  color: var(--navbar-link-hover); /* white text */
+}
+
+/* Sections */
+section {
+  margin: 40px auto 0 auto;
+  max-width: 800px;
+  background-color: var(--very-light-maroon); /* soft light maroon background */
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--maroon); /* maroon */
+  margin-bottom: 15px;
+  /* Smaller invisible box */
+  border: 1px solid transparent; /* thinner border */
+  padding: 4px 0; /* less padding */
+  border-radius: 4px; /* smaller radius */
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+/* Hover effect for section headings */
+section h2:hover {
+  color: #fff;
+  background-color: var(--maroon);
+  border-color: var(--maroon);
+}
+
+/* Add more space below the last section */
+section:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* About */
+.about p {
+  font-size: 1.1rem;
+}
+
+/* Skills */
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills li {
+  background-color: var(--lighter-maroon); /* use new lighter maroon */
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+/* Projects */
+.projects .project {
+  background-color: var(--very-light-maroon); /* use very light maroon */
+  border: 1px solid #e1b0b0; /* maroon-tinted border */
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.projects .project a {
+  color: #800000; /* maroon */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.projects .project a:hover {
+  text-decoration: underline;
+  color: #a83232; /* lighter maroon on hover */
+}
+
+/* Contact */
+.contact a {
+  color: var(--maroon);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #a83232; /* lighter maroon on hover */
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 900px) {
+  section {
+    max-width: 95%;
+    padding: 15px;
+  }
+  .hero > * {
+    max-width: 95%;
+  }
+  .hero {
+    padding: 40px 10px;
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+  }
+  .hero {
+    padding: 30px 5px;
+    font-size: 1rem;
+  }
+  section {
+    margin: 20px 4px;
+    padding: 10px;
+    max-width: 100%;
+  }
+  section h2 {
+    font-size: 1.3rem;
+    padding: 3px 0;
+  }
+  .profile-pic {
+    width: 100px; /* still larger than before for mobile */
+    height: 100px;
+  }
+  .skills ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .linkedin-link {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }
+  /* Make project cards stack with less padding */
+  .projects .project {
+    padding: 10px;
+    font-size: 0.98rem;
+  }
+  /* Make text and buttons easier to tap */
+  .projects .project a,
+  .contact a {
+    font-size: 1rem;
+    padding: 2px 0;
+  }
+}
+

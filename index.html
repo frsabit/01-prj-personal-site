@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fahin's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <!-- Home link with icon -->
+    <a href="#home">
+      <img src="img/home.png" alt="Home" class="nav-icon" />
+      Home
+    </a>
+    <a href="#about">
+      <img src="img/about.png" alt="About" class="nav-icon" />
+      About
+    </a>
+    <a href="#skills">
+      <img src="img/skills.png" alt="Skills" class="nav-icon" />
+      Skills
+    </a>
+    <a href="#projects">
+      <img src="img/projects.png" alt="Projects" class="nav-icon" />
+      Projects
+    </a>
+    <a href="#contact">
+      <img src="img/contact me.png" alt="Contact" class="nav-icon" />
+      Contact
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <img src="img/profile.jpg" alt="Your photo" class="profile-pic" />
+    <h1>Hello, I'm Fahin</h1>
+    <p>Aspiring Web Developer & CS + Econ at Denison University</p>
+  </header>
+
+  <!-- About Me Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m currently studying computer science, physics & economics, with learning web development and how to build responsive websites on the side.
+      I love playing soccer, learning new things, and playing video games!
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Project 1</h3>
+      <p>I created a website showing intel's sustainability journey throughout the years.</p>
+      <a href="https://frsabit.github.io/02-prj-intel-sustainability/" target="_blank">View Project</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:sabit_f1@denison.edu">sabit_f1@denison.edu</a></p>
+    <p>GitHub: <a href="https://github.com/frsabit" target="_blank">github.com/frsabit</a></p>
+    <p>
+      <a href="https://www.linkedin.com/in/f-r-sabit-8716642a1/" target="_blank">
+        My LinkedIn
+      </a>
+    </p>
+  </section>
+
 </body>
 </html>
